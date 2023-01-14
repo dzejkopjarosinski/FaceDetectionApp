@@ -42,7 +42,7 @@ const NewPost = () =>{
 
     return(
         <div>
-
+            <img src="" alt="" />
 
 
         </div>
