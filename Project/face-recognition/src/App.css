@@ -1,13 +1,12 @@
-.App {
-  text-align: center;
+.app {
   display: flex;
 }
 
-canvas{
+canvas {
   position: absolute;
 }
 
-.navbar{
+.navbar {
   height: 50px;
   background-color: cadetblue;
   display: flex;
@@ -18,69 +17,67 @@ canvas{
   font-size: 20px;
 }
 
-.avatar{
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  margin-right: 20px;
-}
-
-.addPost{
-  display: flex;
-
-}
-
-.postForm{
-  display: flex;
-  flex-direction: column;
-}
-
-.newPostCard{
+.newPostCard {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-label{
+.addPost {
+  display: flex;
+}
+
+label {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
 }
 
-.addImg{
+.addImg {
   width: 25px;
   cursor: pointer;
-
 }
 
-.postInput{
+.postForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+button {
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+  background-color: teal;
+  cursor: pointer;
+}
+
+.postInput {
   height: 30px;
   border: none;
   margin-bottom: 10px;
 }
 
-button{
-  border: none;
-  padding: 5px 10px;
-  border-radius: 5px;
-  color: white;
-  background-color: green;
-  cursor: pointer;
-}
-
-.container{
-  height: calc(100vh -50px);
+.container {
+  height: calc(100vh - 50px);
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
-.left{
+.left {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .right {
@@ -98,5 +95,21 @@ button{
 
 .rightButton {
   padding: 10px 20px;
+  font-weight: bold;
+}
+
+.friendInput {
+  position: absolute;
+  padding: 10px;
+  font-weight: bold;
+  border: none;
+}
+
+.friends {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.name {
   font-weight: bold;
 }
