@@ -1,7 +1,10 @@
 import { useEffect, useRef } from 'react';
 import * as faceapi from "face-api.js"
 
-const NewPost = () =>{
+const NewPost = ({image}) =>{
+
+    const{url, width, height} = image;
+
     const imgRef = useRef();
     const canvasRef = useRef();
   
@@ -11,9 +14,9 @@ const NewPost = () =>{
       .withFaceExpressions();
   
       canvasRef.current.innerHtml = faceapi.createCanvasFromMedia(imgRef.current)
-      faceapi.matchDimensions(canvasRef.current, {width: 940, height:600,});
+      faceapi.matchDimensions(canvasRef.current, {width, height,});
   
-      const resized = faceapi.resizeResults(detections,{width:940, height:600,});
+      const resized = faceapi.resizeResults(detections,{width, height,});
   
       faceapi.draw.drawDetections(canvasRef.current, resized);
       faceapi.draw.drawFaceExpressions(canvasRef.current, resized);
@@ -41,8 +44,22 @@ const NewPost = () =>{
 
 
     return(
-        <div>
-            <img src="" alt="" />
+        <div className='container'>
+            <div className='left' style={{width, height}}>
+                <img ref={imgRef} src={url} crossOrigin = "anonymus" alt="" />
+                <canvas ref={canvasRef} width={width} height={height}/>
+            </div>
+            <div className='right'>
+                <h1>Share your post</h1>
+                <input
+                    type="text"
+                    placeholder="what's on your mind?"
+                    className="rightInput"
+                />
+
+                <button className='rightButton'>Send</button>
+            </div>
+            
 
 
         </div>

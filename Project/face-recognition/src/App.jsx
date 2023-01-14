@@ -33,6 +33,7 @@ function App() {
   return (
     <div>
       <Navbar />
+      {image ? (<NewPost image={image} />) : (
       <div className='newPostCard'>
         <div className='addPost'>
           <img
@@ -77,9 +78,8 @@ function App() {
         </div>
 
 
-
       </div> 
-      
+      )};
     </div>
     
 
